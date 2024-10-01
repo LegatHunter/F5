@@ -1,0 +1,14 @@
+header.header.container
+  a(href="#")
+    img(src="../img/logo.png", alt="logo").logo
+  nav.header__nav
+    ul.header__nav_list
+      for name in ["Home", "Company", "Blog"]
+        a(href="#")
+          li.header__nav_item= name
+  .header__login
+    button.header__btn_post Post a Job
+    button.header__btn_login Log in
+
+
+

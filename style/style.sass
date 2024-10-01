@@ -1,0 +1,43 @@
+@import url('https://fonts.googleapis.com/css2?family=Archivo:ital,wdth,wght@0,62..125,700;1,62..125,700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap')
+@import url('https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,100..900;1,100..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap')
+@import reset
+@import variable
+@import mixin
+
+*
+  @include font-family (14px, 400, 180%, $colors-bright-gray)
+
+.container
+  margin: 0 auto
+  max-width: 1140px
+  width: 100%
+
+.body
+  display: flex
+  flex-direction: column
+
+.header
+  display: flex
+  justify-content: space-between
+  align-items: center
+  padding: 24px 0
+  @include font-family (14px, 500, 171%, $colors-bright-gray)
+  &__nav
+    &_list
+      display: flex
+      gap: 12px
+    &_item
+      padding: 10px 16px
+      cursor: pointer
+    &_item:hover
+      color: $colors-royal-blue
+  &__btn
+    display: flex
+    gap: 8px
+    &_post
+      @include white-btn(10px, 16px, 100px)
+    &_login
+      @include blue-btn($colors-royal-blue, 20px)
+  &__hr
+    border: none
+    border-top: 1px solid $colors-athens-gray

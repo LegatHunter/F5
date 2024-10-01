@@ -1,0 +1,30 @@
+@mixin font-family($fs, $fw, $lh, $font-color)
+  font-family: "Inter", sans-serif
+  font-size: $fs
+  font-weight: $fw
+  line-height: $lh
+  color: $font-color
+
+@mixin second-family($fs, $fw, $lh, $font-color)
+  font-family: "Archivo", sans-serif
+  font-size: $fs
+  font-weight: $fw
+  line-height: $lh
+  color: $font-color
+
+@mixin blue-btn($color, $pr)
+  background-color: $color
+  color: $colors-nero
+  cursor: pointer
+  border: none
+  padding: 10px $pr
+  letter-spacing: -0.02em
+
+
+@mixin white-btn($pt, $pr, $width)
+  background-color: #fff
+  cursor: pointer
+  border: none
+  padding: $pt $pr
+  width: $width
+  letter-spacing: -0.02em
