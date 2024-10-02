@@ -1,0 +1,32 @@
+const cards = [
+  {
+    company: "Dribble",
+    date: "October 25, 2022",
+    spec: "Front End Developer",
+    tag1: "Marketing",
+    tag2: "Part Time",
+    location: "San Antonio",
+    money: "$130k-160k",
+    url: "#",
+  },
+  {
+    company: "Tokopedia",
+    date: "March 30, 2021",
+    spec: "Scrum Master",
+    tag1: "Marketing",
+    tag2: "Part Time",
+    location: "San Antonio",
+    money: "$130k-160k",
+    url: "#",
+  },
+  {
+    company: "Facebook",
+    date: "March 30, 2021",
+    spec: "Lead Technical Architect",
+    tag1: "Technology",
+    tag2: "Full Time",
+    location: "Melbourne",
+    money: "$210k-240k",
+    url: "#",
+  },
+];

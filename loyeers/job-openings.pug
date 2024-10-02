@@ -1,18 +1,25 @@
-section.jo.container
-  .jo__title
-    h3 Explore the latest job openings
-    .jo__title_info
-      p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed a mi rhoncus,<br>pharetra leo et, efficitur tortor. Fusce vel convallis magna.
-      button.jo__title_btn See All Jobs
-  .jo__cards
-    var cards = [{
-      logo: 'img/dribble.png',
-      company: 'Dribble',
-      date: 'October 25, 2022',
-      spec: 'Front End Developer',
-      tag1: 'Marketing',
-      tag2: 'Part Time',
-      location: 'San Antonio',
-      money: '$ 130k-160k',
-      url: '#'
-    }]
+- const cards = [{ logo: 'img/dribble.svg', company: 'Dribble', date: 'October 25, 2022', spec: 'Front End Developer', tag1: 'Marketing', tag2: 'Part Time', location: 'San Antonio', money: '$130k-160k', url: '#' },{ logo: 'img/dribble.svg', company: 'Dribble', date: 'October 25, 2022', spec: 'Backend Developer', tag1: 'Design', tag2: 'Full Time', location: 'Dallas', money: '$50k-70k', url: '#' }, { logo: 'img/tokopedia.svg', company: 'Tokopedia', date: 'March 30, 2021', spec: 'Scrum Master', tag1: 'Marketing', tag2: 'Part Time', location: 'San Antonio', money: '$130k-160k', url: '#' }, { logo: 'img/facebook.svg', company: 'Facebook', date: 'March 30, 2021', spec: 'Lead Technical Architect', tag1: 'Technology', tag2: 'Full Time', location: 'Melbourne', money: '$210k-240k', url: '#' }, { logo: 'img/spotify.svg', company: 'Spotify', date: 'March 30, 2021', spec: 'Digital Media Strategist', tag1: 'Business', tag2: 'Casual', location: 'New York', money: '$50k-70k', url: '#' }, { logo: 'img/paypal.svg', company: 'Paypal', date: 'March 30, 2021', spec: 'Systems Administrator', tag1: 'Business', tag2: 'Casual', location: 'California', money: '$40k-50k', url: '#' }]
+section.jo
+  .container
+    .jo__title
+      h3 Explore the latest job openings
+      .jo__title_info
+        p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed a mi rhoncus,<br>pharetra  leo et, efficitur tortor. Fusce vel convallis magna.
+        button.jo__title_btn See All Jobs
+    .jo__cards
+      each card in cards
+        .jo__card
+          .jo__card_info
+            .jo__card_logo
+              img(src=card.logo)
+            .jo__card_name
+              p= card.company
+              span= card.date
+          h6.jo__card_spec= card.spec
+          .jo__card_tags
+            p= card.tag1
+            span= card.tag2
+          .jo__card_location
+            p= card.location
+          .jo__card_money
+            p= card.money

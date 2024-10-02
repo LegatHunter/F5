@@ -88,13 +88,11 @@
       position: absolute
       left: 15px
       fill: #84889A
-
     &_building
       position: relative
       top: -35px
       z-index: -1
       object-fit: cover
-
   &__input_search
     border: none
     outline: none
@@ -117,3 +115,47 @@
     justify-content: space-between
     margin-top: 34px
     padding: 16px 28px
+
+.jo
+  background-color: $colors-athens-gray
+  &__cards
+    display: grid
+    grid-template-columns: repeat(3, 1fr)
+    gap: 32px
+    margin-top: 58px
+    // @media (max-width: 1024px)
+    //   grid-template-columns: repeat(2, 1fr)
+    // @media (max-width: 768px)
+    //   grid-template-columns: repeat(1, 1fr)
+  &__card
+    display: flex
+    flex-direction: column
+    gap: 23px
+    border: 1px solid $colors-athens-gray
+    background-color: $colors-nero
+    // max-width: 358px
+    &_info
+      display: flex
+      gap: 14px
+      align-items: center
+    &_logo
+      padding: 12px
+      border: 1px solid $colors-athens-gray
+    &_name
+      & p
+        @include font-family(16px, 500, 180%, $colors-ebony, -0.02em)
+      & span
+        @include font-family(14px, 400, 160%, $colors-shuttle-gray, -0.02em)
+    &_spec
+      @include second-family(18px, 700, 130%, $colors-ebony, 0)
+    &_tags
+      display: flex
+      gap: 8px
+      & p
+        @include font-family(14px, 400, 120%, $colors-royal-blue, 0)
+        padding: 6px 12px
+        background-color: $colors-link-water
+      & span
+        @include font-family(14px, 400, 120%, $colors-tussock, 0)
+        padding: 6px 12px
+        background-color: $colors-seashell-peach
