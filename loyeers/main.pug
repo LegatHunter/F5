@@ -3,8 +3,19 @@ main.main.container
     span NEW
     p Stay connected to get upcoming jobs
   .main__title
-    h1 Find the most exciting jobs in tech
+    h2 Find the most<br>exciting jobs in tech
     p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed a mi rhoncus, pharetra leo et. Sign in or sign up to get started!
   .main__search
-    .main__search_input
-    
+    .main__search_icon
+      .main__search_svg
+          <svg width="22" height="21" xmlns="http://www.w3.org/2000/svg">
+            <path d="m16.84 14.645 4.284 4.282-1.415 1.415-4.282-4.283a8.96 8.96 0 0 1-5.617 1.97c-4.968 0-9-4.033-9-9 0-4.969 4.032-9 9-9s9 4.031 9 9a8.96 8.96 0 0 1-1.97 5.616Zm-2.005-.742a6.977 6.977 0 0 0 1.975-4.875c0-3.868-3.133-7-7-7-3.868 0-7 3.132-7 7 0 3.867 3.132 7 7 7a6.977 6.977 0 0 0 4.875-1.975l.15-.15Z"/>
+          </svg>
+      input.main__input_search(type="text" placeholder="Search...")
+      button.main__btn_search Search
+    .main__search_building
+      img(src="img/building.jpg")
+  ul.main__company-list
+    for company in ['../img/label_1.svg','../img/label_2.svg','../img/label_3.svg','../img/label_4.svg','../img/label_5.svg','../img/label_6.svg']
+      li.main__company-list_item
+        img(src=company)

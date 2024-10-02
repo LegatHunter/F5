@@ -1,11 +1,10 @@
-@import url('https://fonts.googleapis.com/css2?family=Archivo:ital,wdth,wght@0,62..125,700;1,62..125,700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap')
-@import url('https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,100..900;1,100..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap')
+@import url('https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,600;1,600&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap')
 @import reset
 @import variable
 @import mixin
 
 *
-  @include font-family (14px, 400, 180%, $colors-bright-gray)
+  @include font-family (14px, 400, 180%, $colors-bright-gray, 0.02em)
 
 .container
   margin: 0 auto
@@ -21,7 +20,7 @@
   justify-content: space-between
   align-items: center
   padding: 24px 0
-  @include font-family (14px, 500, 171%, $colors-bright-gray)
+  @include font-family (14px, 500, 171%, $colors-bright-gray, -0.02em)
   &__nav
     &_list
       display: flex
@@ -35,9 +34,86 @@
     display: flex
     gap: 8px
     &_post
-      @include white-btn(10px, 16px, 100px)
+      @include white-btn(10px, 16px, 100px, -0.02em)
     &_login
-      @include blue-btn($colors-royal-blue, 20px)
+      @include blue-btn($colors-royal-blue, 20px, -0.02em)
   &__hr
     border: none
     border-top: 1px solid $colors-athens-gray
+
+.main
+  margin-top: 65px
+  margin-bottom: 63px
+  &__new
+    display: flex
+    gap: 12px
+    padding: 8px
+    background-color: $colors-athens-gray
+    max-width: 298px
+    align-items: center
+    & span
+      @include font-family (12px, 600, 12px, $colors-royal-blue, 0.08em)
+      background-color: $colors-nero
+      padding: 4px 8px
+    & p
+      @include font-family (12px, 500, 133%, $colors-ebony, 0)
+  &__title
+    display: flex
+    justify-content: space-between
+    align-items: flex-end
+    margin-top: 23px
+    & h2
+      max-width: 473px
+      @include second-family (48px, 700, 120%, $colors-ebony, -0.02em)
+    & p
+      max-width: 540px
+      @include font-family (16px, 400, 200%, $colors-bright-gray, 0)
+  &__search
+    margin-top: 98.7px
+    &_icon
+      position: relative
+      display: flex
+      align-items: center
+      justify-content: space-between
+      background-color: $colors-nero
+      border: 1px solid $colors-athens-gray
+      max-width: 720px
+      padding: 13px
+      &:hover, &:focus-within
+        border: 1px solid $colors-royal-blue
+        fill: $colors-royal-blue
+      &:hover svg, &:focus-within svg
+        fill: $colors-royal-blue
+    &_svg
+      position: absolute
+      left: 15px
+      fill: #84889A
+
+    &_building
+      position: relative
+      top: -35px
+      z-index: -1
+      object-fit: cover
+
+  &__input_search
+    border: none
+    outline: none
+    background-color: $colors-nero
+    padding-left: 37px
+    width: 100%
+    &::placeholder
+      @include font-family (14px, 400, 100%, $colors-dusty-gray, 0.02em)
+    &:focus .main__search_icon
+      border: 1px solid $colors-royal-blue
+  &__btn_search
+    @include blue-btn($colors-royal-blue, 32px, -0.02em)
+    @include font-family(14px, 500, 171%, $colors-nero, -0.02em)
+    &:disabled svg
+      fill: $colors-bombay
+  &__company-list
+    display: flex
+    flex-wrap: wrap
+    align-items: center
+    justify-content: space-between
+    margin-top: 34px
+    padding: 16px 28px
