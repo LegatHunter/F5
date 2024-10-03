@@ -144,10 +144,10 @@
     grid-template-columns: repeat(3, 1fr)
     gap: 32px
     margin-top: 58px
-    // @media (max-width: 1024px)
-    //   grid-template-columns: repeat(2, 1fr)
-    // @media (max-width: 768px)
-    //   grid-template-columns: repeat(1, 1fr)
+    @media (max-width: 1024px)
+      grid-template-columns: repeat(2, 1fr)
+    @media (max-width: 768px)
+      grid-template-columns: repeat(1, 1fr)
   &__card
     display: flex
     flex-direction: column
@@ -247,4 +247,5 @@
         @include font-family(14px, 500, 120%, $colors-green-pea, 0)
         padding: 10px 15px
         background-color: $colors-harp
-        // max-width: 125px
+        display: inline-block
+        width: fit-content

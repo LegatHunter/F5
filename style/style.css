@@ -315,6 +315,16 @@ body, html {
   gap: 32px;
   margin-top: 58px;
 }
+@media (max-width: 1024px) {
+  .jo__cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 768px) {
+  .jo__cards {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
 .jo__card {
   display: flex;
   flex-direction: column;
@@ -489,4 +499,7 @@ body, html {
   letter-spacing: 0;
   padding: 10px 15px;
   background-color: #f1f8f4;
+  display: inline-block;
+  width: -moz-fit-content;
+  width: fit-content;
 }/*# sourceMappingURL=style.css.map */
