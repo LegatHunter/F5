@@ -1,4 +1,4 @@
-- const cards = [{ logo: 'img/dribble.svg', company: 'Dribble', date: 'October 25, 2022', spec: 'Front End Developer', tag1: 'Marketing', tag2: 'Part Time', location: 'San Antonio', money: '$130k-160k', url: '#' },{ logo: 'img/dribble.svg', company: 'Dribble', date: 'October 25, 2022', spec: 'Backend Developer', tag1: 'Design', tag2: 'Full Time', location: 'Dallas', money: '$50k-70k', url: '#' }, { logo: 'img/tokopedia.svg', company: 'Tokopedia', date: 'March 30, 2021', spec: 'Scrum Master', tag1: 'Marketing', tag2: 'Part Time', location: 'San Antonio', money: '$130k-160k', url: '#' }, { logo: 'img/facebook.svg', company: 'Facebook', date: 'March 30, 2021', spec: 'Lead Technical Architect', tag1: 'Technology', tag2: 'Full Time', location: 'Melbourne', money: '$210k-240k', url: '#' }, { logo: 'img/spotify.svg', company: 'Spotify', date: 'March 30, 2021', spec: 'Digital Media Strategist', tag1: 'Business', tag2: 'Casual', location: 'New York', money: '$50k-70k', url: '#' }, { logo: 'img/paypal.svg', company: 'Paypal', date: 'March 30, 2021', spec: 'Systems Administrator', tag1: 'Business', tag2: 'Casual', location: 'California', money: '$40k-50k', url: '#' }]
+- const cards = [{ logo: 'img/dribble.svg', company: 'Dribble', date: 'October 25, 2022', spec: 'Front End Developer', tag1: 'Marketing', tag2: 'Part Time', location: 'San Antonio', money: '$ 130k-160k', url: '#' },{ logo: 'img/dribble.svg', company: 'Dribble', date: 'October 25, 2022', spec: 'Backend Developer', tag1: 'Design', tag2: 'Full Time', location: 'Dallas', money: '$ 50k-70k', url: '#' }, { logo: 'img/tokopedia.svg', company: 'Tokopedia', date: 'March 30, 2021', spec: 'Scrum Master', tag1: 'Marketing', tag2: 'Part Time', location: 'San Antonio', money: '$ 130k-160k', url: '#' }, { logo: 'img/facebook.svg', company: 'Facebook', date: 'March 30, 2021', spec: 'Lead Technical Architect', tag1: 'Technology', tag2: 'Full Time', location: 'Melbourne', money: '$ 210k-240k', url: '#' }, { logo: 'img/spotify.svg', company: 'Spotify', date: 'March 30, 2021', spec: 'Digital Media Strategist', tag1: 'Business', tag2: 'Casual', location: 'New York', money: '$ 50k-70k', url: '#' }, { logo: 'img/paypal.svg', company: 'Paypal', date: 'March 30, 2021', spec: 'Systems Administrator', tag1: 'Business', tag2: 'Casual', location: 'California', money: '$ 40k-50k', url: '#' }]
 section.jo
   .container
     .jo__title
@@ -19,7 +19,10 @@ section.jo
           .jo__card_tags
             p= card.tag1
             span= card.tag2
-          .jo__card_location
-            p= card.location
-          .jo__card_money
-            p= card.money
+          .jo__card_footer
+            .jo__card_location
+              img(src="img/dot.svg")
+              p= card.location
+            .jo__card_money
+              img(src="img/money.svg")
+              p= card.money

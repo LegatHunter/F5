@@ -76,13 +76,15 @@
       align-items: center
       justify-content: space-between
       background-color: $colors-nero
-      border: 1px solid $colors-athens-gray
+      outline: 1px solid $colors-athens-gray
+      transition: 0.3s
       max-width: 720px
       padding: 13px
       &:hover, &:focus-within
-        border: 1px solid $colors-royal-blue
+        outline: 1px solid $colors-royal-blue
         fill: $colors-royal-blue
       &:hover svg, &:focus-within svg
+        transition: 0.3s
         fill: $colors-royal-blue
     &_svg
       position: absolute
@@ -115,9 +117,28 @@
     justify-content: space-between
     margin-top: 34px
     padding: 16px 28px
-
+    & svg:hover path
+      transition: 0.3s
+      fill: $colors-royal-blue
 .jo
   background-color: $colors-athens-gray
+  padding: 64px 0
+  &__title
+    display: flex
+    flex-direction: column
+    gap: 16.5px
+    & h3
+      @include second-family(40px, 700, 120%, $colors-ebony, -0.02em)
+    &_info
+      display: flex
+      align-items: flex-end
+      justify-content: space-between
+      & p
+        @include font-family(16px, 400, 180%, $colors-bright-gray, -0.02em)
+      & button
+        text-align: center
+        @include blue-btn($colors-royal-blue, 20px, -0.02em)
+        @include font-family(14px, 500, 171%, $colors-nero, -0.02em)
   &__cards
     display: grid
     grid-template-columns: repeat(3, 1fr)
@@ -131,9 +152,13 @@
     display: flex
     flex-direction: column
     gap: 23px
-    border: 1px solid $colors-athens-gray
     background-color: $colors-nero
-    // max-width: 358px
+    cursor: pointer
+    padding: 29px
+    outline: 1px solid $colors-athens-gray
+    transition: outline-color 0.3s
+    &:hover
+      outline: 4px solid $colors-royal-blue
     &_info
       display: flex
       gap: 14px
@@ -159,3 +184,67 @@
         @include font-family(14px, 400, 120%, $colors-tussock, 0)
         padding: 6px 12px
         background-color: $colors-seashell-peach
+    &_footer
+      display: flex
+      gap: 24px
+    &_location, &_money
+      display: flex
+      gap: 9px
+      align-items: center
+
+.work
+  padding: 64px 0
+  &__title
+    display: flex
+    align-items: flex-end
+    justify-content: space-between
+    &_info
+      display: flex
+      flex-direction: column
+      gap: 8px
+      & h3
+        @include second-family(40px, 700, 120%, $colors-ebony, -0.02em)
+      & p
+        @include font-family(14px, 400, 160%, $colors-shuttle-gray, -0.02em)
+    &_slide-btn
+      display: flex
+      gap: 22px
+      & button
+        cursor: pointer
+        text-align: center
+        width: 48px
+        height: 48px
+        border: 1px solid $colors-athens-gray
+        background-color: $colors-nero
+  &__slider
+    margin-top: 58px
+    display: flex
+    gap: 24px
+    &_img
+      border: 1px solid $colors-athens-gray
+      padding: 12px
+      object-fit: cover
+      width: 56px
+      height: 56px
+    &_card
+      display: flex
+      flex-direction: column
+      gap: 24px
+      border: 1px solid $colors-athens-gray
+      padding: 41px
+      max-width: 390px
+      width: 100%
+      cursor: pointer
+      &-logo
+        display: flex
+        gap: 14px
+        align-items: center
+        & h6
+          @include second-family(18px, 700, 130%, $colors-ebony, 0)
+      &-info
+        @include font-family(16px, 400, 180%, $colors-bright-gray, -0.02em)
+      &-emp
+        @include font-family(14px, 500, 120%, $colors-green-pea, 0)
+        padding: 10px 15px
+        background-color: $colors-harp
+        // max-width: 125px
