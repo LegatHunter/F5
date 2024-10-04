@@ -1,12 +1,12 @@
 - const companies = [{ logo: 'img/dribble.svg', company: 'Dribble', info: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus at dui mollis metus gravida tristique.', epm: '65 Employees'},{ logo: 'img/paypal.svg', company: 'Paypal', info: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus at dui mollis metus gravida tristique.', epm: '6000 Employees'}, { logo: 'img/spotify.svg', company: 'Spotify', info: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus at dui mollis metus gravida tristique.', epm: '2000 Employees'}, { logo: 'img/slack.svg', company: 'Slack', info: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus at dui mollis metus gravida tristique.', epm: '400 Employees'}]
-section.work
-  .work__title.container
+section.work.container
+  .work__title
     .work__title_info
       h3 Work with exciting companies
       p Discover more than 1,600 open positions
     .work__title_slide-btn
-      button.work__btn_left <svg width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/00/svg"><path d="M4.63769 7.58858L10.0017 2.22455L8.58769 0.810547L0.809692 8.58858L8.58769 16.3666L10.17 14.9526L4.63769 9.58858H16.8097V7.58858H4.63769Z" fill="#D6D7E0" /></svg>
-      button.work__btn_right <svg width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.g/2000/svg"><path d="M12.9817 7.58858L7.61769 2.22455L9.03169 0.810547L16.8097 8.58858L9.03169 16.3666L7.769 14.9526L12.9817 9.58858H0.809692V7.58858H12.9817Z" fill="#030407" /></svg>
+      button.work__btn_left
+      button.work__btn_right
   .work__slider
     each card in companies
       .work__slider_card
@@ -16,3 +16,20 @@ section.work
           h6= card.company
         p.work__slider_card-info= card.info
         p.work__slider_card-emp= card.epm
+  .work__person
+    .work__person_img
+      img(src="img/man_its_ok.jpg")
+      p Partnership with Glassdoor and LinkedIn
+    .work__person_info
+      h3 Build a custom membership site with locked content.
+      p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed a mi rhoncus, pharetra leo et, efficitur tortor. Fusce vel convallis magna, sit amet pulvinar diam. Sed laoreet feugiat consequat.
+      .work__person_list
+        for item in [1, 2, 3]
+          .work__person_item
+            .work__person_item-icon
+              img(src="img/two_user.svg")
+            .work__person_item-desc
+              p Add a feature point here
+              small Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+
+

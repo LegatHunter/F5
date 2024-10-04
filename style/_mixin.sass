@@ -29,3 +29,52 @@
   padding: $pt $pr
   width: $width
   letter-spacing: $ls
+
+@mixin slider-btn()
+  cursor: pointer
+  text-align: center
+  width: 48px
+  height: 48px
+  border: 1px solid $colors-athens-gray2
+  background-color: $colors-nero
+  background-repeat: no-repeat
+  background-position: center
+
+// @mixin search-form()
+//   &__search
+//     margin-top: 98.7px
+//     &_icon
+//       position: relative
+//       display: flex
+//       align-items: center
+//       justify-content: space-between
+//       background-color: $colors-nero
+//       outline: 1px solid $colors-athens-gray
+//       transition: 0.3s
+//       max-width: 720px
+//       padding: 13px
+//       &:hover, &:focus-within
+//         outline: 1px solid $colors-royal-blue
+//         fill: $colors-royal-blue
+//       &:hover svg, &:focus-within svg
+//         transition: 0.3s
+//         fill: $colors-royal-blue
+//     &_svg
+//       position: absolute
+//       left: 15px
+//       fill: #84889A
+//   &__input_search
+//     border: none
+//     outline: none
+//     background-color: $colors-nero
+//     padding-left: 37px
+//     width: 100%
+//     &::placeholder
+//       @include font-family (14px, 400, 100%, $colors-dusty-gray, 0.02em)
+//     &:focus .main__search_icon
+//       border: 1px solid $colors-royal-blue
+//   &__btn_search
+//     @include blue-btn($colors-royal-blue, 32px, -0.02em)
+//     @include font-family(14px, 500, 171%, $colors-nero, -0.02em)
+//     &:disabled svg
+//       fill: $colors-bombay

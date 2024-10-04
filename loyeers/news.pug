@@ -1,0 +1,20 @@
+- const news= [{img:'img/slider_1.jpg', tag: 'Resources', title: 'Finding employees in the gig economy', date: 'October 24, 2022'}, {img:'img/slider_2.jpg', tag: 'Education', title: 'How to make a great first impression everytime', date: 'October 24, 2022'}, {img:'img/slider_3.jpg', tag: 'Trends', title: 'Find out the best paying careers in 2022', date: 'October 24, 2022'}, {img:'img/slider_4.jpg', tag: 'Careers', title: 'Ten things to nail your next job Interview', date: 'March 24, 2021'}]
+
+section.news
+  .container
+    .news__title
+      h3 Get the latest news about jobs!
+      .news__title_btn
+        button.news__btn_left
+        button.news__btn_right
+    .news__slider
+      for newsItem in news
+        .news__slider_item
+          .news__slider_item-img
+            img(src=newsItem.img)
+          .news__slider_item-info
+            small=newsItem.tag
+            h5= newsItem.title
+            p= newsItem.date
+          .news__slider_item-btn
+            button Read More <svg width="13" height="13" viewBox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M9.48668 5.75378L5.38918 1.65631L6.46928 0.576172L12.4108 6.51768L6.46928 12.4592L5.38918 11.3791L9.48668 7.28158H0.188599V5.75378H9.48668Z" fill="#24262D" /></svg>
