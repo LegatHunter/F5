@@ -1,0 +1,16 @@
+section.footer
+  hr.footer__hr
+  .footer__cont.container
+    img(src="img/logo.png", alt="logo")
+    .footer__cont_info
+      nav.footer__cont_pages
+        p Pages
+        ul.footer__cont_nav-list
+          for name in ["Home", "Company", "Blog"]
+            a(href="#")
+              li.footer__nav-item= name
+      .footer__cont_sign
+        p Sign up to our newsletter
+        .footer__cont_form
+          input(type="text", placeholder="Email address")
+          button.footer__cont_btn Get Started

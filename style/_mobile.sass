@@ -1,0 +1,89 @@
+@media (max-width: 1139px) and (min-width: 768px)
+
+@media (max-width: 767px)
+
+  .container
+    max-width: 343px
+  .container
+    max-width: 343px
+
+  .header
+    &__nav
+      display: none
+    &__login
+      display: none
+    &__burger
+      display: block
+      padding: 11px
+      border: 1px solid $colors-athens-gray2
+  .main
+    margin-top: 64px
+    &__new
+      & span
+        @include font-family (12px, 600, 133%, $colors-royal-blue, 0.08em)
+      & p
+        padding-left: 4px
+        @include font-family (12px, 500, 133%, $colors-ebony, 0)
+    &__title
+      display: flex
+      gap: 16px
+      flex-wrap: wrap
+      margin-top: 24px
+      & h2
+        max-width: 473px
+        @include second-family (40px, 700, 120%, $colors-ebony, 0em)
+      & p
+        max-width: 540px
+        @include font-family (16px, 400, 200%, $colors-bright-gray, 0)
+    &__search
+      margin-top: 32px
+      &_icon
+        flex-direction: column
+        gap: 12px
+        align-items: stretch
+        margin-bottom: 32px
+      &_svg
+        left: 13px
+        top: 20px
+      &_building
+        position: static
+        &1
+          display: none
+        & img
+          // height: 407px
+    &__input_search
+      height: 44px
+    &__company-list
+      flex-wrap: wrap
+      gap: 50px
+      align-items: center
+      justify-content: space-around
+      margin-top: 34px
+      padding: 16px 14px
+      & svg:hover path
+        transition: 0.3s
+        fill: $colors-royal-blue
+  .jo
+    background-color: $colors-athens-gray
+    padding: 32px 0 58px
+    &__title
+      gap: 16px
+      &_info
+        flex-wrap: wrap
+        gap: 32px
+        & button
+          width: 100%
+    &__card
+      gap: 14px
+      padding: 25px 29px
+      &_footer
+        flex-direction: column
+        gap: 3px
+
+  .work
+    &__title
+      flex-direction: column
+      align-items: stretch
+      gap: 28px
+    &__person_img
+      display: none
