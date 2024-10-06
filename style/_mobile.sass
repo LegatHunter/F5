@@ -1,13 +1,18 @@
 @media (max-width: 1139px) and (min-width: 768px)
 
 @media (max-width: 767px)
-
+  .dn
+    display: block
+  .dnm
+    display: none
   .container
     max-width: 343px
-  .container
+    margin: 0 calc(50% - 171.5px)
+  .container2
     max-width: 343px
 
   .header
+    padding: 21px 0
     &__nav
       display: none
     &__login
@@ -18,6 +23,7 @@
       border: 1px solid $colors-athens-gray2
   .main
     margin-top: 64px
+    margin-bottom: 0
     &__new
       & span
         @include font-family (12px, 600, 133%, $colors-royal-blue, 0.08em)
@@ -28,13 +34,15 @@
       display: flex
       gap: 16px
       flex-wrap: wrap
-      margin-top: 24px
+      margin-top: 20px
       & h2
         max-width: 473px
         @include second-family (40px, 700, 120%, $colors-ebony, 0em)
       & p
         max-width: 540px
         @include font-family (16px, 400, 200%, $colors-bright-gray, 0)
+    &__company-list
+      // margin-top: 2px
     &__search
       margin-top: 32px
       &_icon
@@ -49,8 +57,8 @@
         position: static
         &1
           display: none
-        & img
-          // height: 407px
+        &2
+          display: block
     &__input_search
       height: 44px
     &__company-list
@@ -60,12 +68,10 @@
       justify-content: space-around
       margin-top: 34px
       padding: 16px 14px
-      & svg:hover path
-        transition: 0.3s
-        fill: $colors-royal-blue
   .jo
     background-color: $colors-athens-gray
     padding: 32px 0 58px
+    margin-top: 15px
     &__title
       gap: 16px
       &_info
@@ -74,16 +80,111 @@
         & button
           width: 100%
     &__card
-      gap: 14px
+      gap: 13px
       padding: 25px 29px
       &_footer
         flex-direction: column
         gap: 3px
 
   .work
+    padding: 64px 0 30px
     &__title
       flex-direction: column
       align-items: stretch
       gap: 28px
+      &_slide-btn
+        gap: 14px
+    &__slider
+      margin-top: 24px
+      &_card
+        padding: 33px
     &__person_img
       display: none
+    &__person
+      margin-top: 64px
+      &_info
+        gap: 11px
+        & p:first-child
+          @include font-family(14px, 600, 180%, $colors-royal-blue, 0.08em)
+        & h3
+          margin-bottom: 15px
+      &_list
+        margin-top: 32px
+        gap: 16px
+      &_item
+        align-items: flex-start
+        &-icon
+          min-width: 56px
+          height: 56px
+
+  .users
+    padding-bottom: 32px
+    &__container
+      & p
+        @include font-family(14px, 600, 180%, $colors-royal-blue, 0.08em)
+        text-align: center
+        margin-top: 34px
+      & h3
+        text-wrap: pretty
+        margin-top: 12px
+    &__info
+      position: relative
+      gap: 44px
+      &_desc
+        gap: 16px
+      &_btn
+        position: absolute
+        right: 0
+        top: 0px
+        gap: 12px
+    &__slider
+      &_monkey
+        max-width: 72px
+        padding: 14px
+        background-color: $colors-nero
+        border: 1px solid $colors-athens-gray2
+  .news
+    &__title
+      margin-top: 32px
+      margin-bottom: 13px
+      flex-wrap: wrap
+      gap: 22px
+    &__slider
+      margin-bottom: 64px
+
+  .explore
+    margin-bottom: 32px
+    padding-bottom: 0
+    &__info
+      margin-bottom: 65px
+      &_logo
+        max-width: 317px
+    &__search
+      &_icon
+        position: static
+        transform: none
+        flex-wrap: wrap
+        max-width: 337px
+        align-items: normal
+        gap: 22px
+        justify-content: center
+    &__btn
+      &_search
+        width: 100%
+
+  .footer
+    padding-bottom: 32px
+    margin-top: 0
+    &__hr
+      margin-bottom: 42px
+    &__cont
+      &_info
+        flex-direction: column
+        gap: 40px
+      &_form
+        flex-direction: column
+        align-items: center
+        & input
+          width: 100%
+        & button
+          width: 100%

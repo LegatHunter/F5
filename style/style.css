@@ -78,6 +78,14 @@ body, html {
   flex-direction: column;
 }
 
+.dn {
+  display: none;
+}
+
+.dnm {
+  display: block;
+}
+
 .header {
   display: flex;
   justify-content: space-between;
@@ -221,6 +229,9 @@ body, html {
   z-index: -1;
   -o-object-fit: cover;
      object-fit: cover;
+}
+.main__search_building1 {
+  display: block;
 }
 .main__search_building2 {
   display: none;
@@ -549,7 +560,7 @@ body, html {
 .work__person {
   margin-top: 70px;
   display: flex;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
   align-items: center;
   gap: 104px;
 }
@@ -808,6 +819,7 @@ body, html {
   letter-spacing: 0.07em;
   position: relative;
   margin-left: 12px;
+  text-transform: uppercase;
 }
 .news__slider_item-info p::before {
   content: "";
@@ -960,6 +972,7 @@ body, html {
   max-width: 1140px;
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
 }
 .footer__cont_pages {
   display: flex;
@@ -1058,11 +1071,21 @@ body, html {
 }
 
 @media (max-width: 767px) {
-  .container {
-    max-width: 343px;
+  .dn {
+    display: block;
+  }
+  .dnm {
+    display: none;
   }
   .container {
     max-width: 343px;
+    margin: 0 calc(50% - 171.5px);
+  }
+  .container2 {
+    max-width: 343px;
+  }
+  .header {
+    padding: 21px 0;
   }
   .header__nav {
     display: none;
@@ -1077,6 +1100,7 @@ body, html {
   }
   .main {
     margin-top: 64px;
+    margin-bottom: 0;
   }
   .main__new span {
     font-family: "Inter", sans-serif;
@@ -1099,7 +1123,7 @@ body, html {
     display: flex;
     gap: 16px;
     flex-wrap: wrap;
-    margin-top: 24px;
+    margin-top: 20px;
   }
   .main__title h2 {
     max-width: 473px;
@@ -1138,6 +1162,9 @@ body, html {
   .main__search_building1 {
     display: none;
   }
+  .main__search_building2 {
+    display: block;
+  }
   .main__input_search {
     height: 44px;
   }
@@ -1149,13 +1176,10 @@ body, html {
     margin-top: 34px;
     padding: 16px 14px;
   }
-  .main__company-list svg:hover path {
-    transition: 0.3s;
-    fill: rgb(68, 63, 222);
-  }
   .jo {
     background-color: #f8f8fa;
     padding: 32px 0 58px;
+    margin-top: 15px;
   }
   .jo__title {
     gap: 16px;
@@ -1168,19 +1192,147 @@ body, html {
     width: 100%;
   }
   .jo__card {
-    gap: 14px;
+    gap: 13px;
     padding: 25px 29px;
   }
   .jo__card_footer {
     flex-direction: column;
     gap: 3px;
   }
+  .work {
+    padding: 64px 0 30px;
+  }
   .work__title {
     flex-direction: column;
     align-items: stretch;
     gap: 28px;
   }
+  .work__title_slide-btn {
+    gap: 14px;
+  }
+  .work__slider {
+    margin-top: 24px;
+  }
+  .work__slider_card {
+    padding: 33px;
+  }
   .work__person_img {
     display: none;
+  }
+  .work__person {
+    margin-top: 64px;
+  }
+  .work__person_info {
+    gap: 11px;
+  }
+  .work__person_info p:first-child {
+    font-family: "Inter", sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 180%;
+    color: rgb(68, 63, 222);
+    letter-spacing: 0.08em;
+  }
+  .work__person_info h3 {
+    margin-bottom: 15px;
+  }
+  .work__person_list {
+    margin-top: 32px;
+    gap: 16px;
+  }
+  .work__person_item {
+    align-items: flex-start;
+  }
+  .work__person_item-icon {
+    min-width: 56px;
+    height: 56px;
+  }
+  .users {
+    padding-bottom: 32px;
+  }
+  .users__container p {
+    font-family: "Inter", sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 180%;
+    color: rgb(68, 63, 222);
+    letter-spacing: 0.08em;
+    text-align: center;
+    margin-top: 34px;
+  }
+  .users__container h3 {
+    text-wrap: pretty;
+    margin-top: 12px;
+  }
+  .users__info {
+    position: relative;
+    gap: 44px;
+  }
+  .users__info_desc {
+    gap: 16px;
+  }
+  .users__info_btn {
+    position: absolute;
+    right: 0;
+    top: 0px;
+    gap: 12px;
+  }
+  .users__slider_monkey {
+    max-width: 72px;
+    padding: 14px;
+    background-color: #fff;
+    border: 1px solid #ebebef;
+  }
+  .news__title {
+    margin-top: 32px;
+    margin-bottom: 13px;
+    flex-wrap: wrap;
+    gap: 22px;
+  }
+  .news__slider {
+    margin-bottom: 64px;
+  }
+  .explore {
+    margin-bottom: 32px;
+    padding-bottom: 0;
+  }
+  .explore__info {
+    margin-bottom: 65px;
+  }
+  .explore__info_logo {
+    max-width: 317px;
+  }
+  .explore__search_icon {
+    position: static;
+    transform: none;
+    flex-wrap: wrap;
+    max-width: 337px;
+    align-items: normal;
+    gap: 22px;
+    justify-content: center;
+  }
+  .explore__btn_search {
+    width: 100%;
+  }
+  .footer {
+    padding-bottom: 32px;
+    margin-top: 0;
+  }
+  .footer__hr {
+    margin-bottom: 42px;
+  }
+  .footer__cont_info {
+    flex-direction: column;
+    gap: 40px;
+  }
+  .footer__cont_form {
+    flex-direction: column;
+    align-items: center;
+  }
+  .footer__cont_form input {
+    width: 100%;
+  }
+  .footer__cont_form button {
+    width: 100%;
   }
 }/*# sourceMappingURL=style.css.map */

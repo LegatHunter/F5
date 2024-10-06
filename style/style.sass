@@ -20,6 +20,10 @@
   display: flex
   flex-direction: column
 
+.dn
+  display: none
+.dnm
+  display: block
 .header
   display: flex
   justify-content: space-between
@@ -105,8 +109,10 @@
       top: -35px
       z-index: -1
       object-fit: cover
+      &1
+        display: block
       &2
-          display: none
+        display: none
   &__input_search
     border: none
     outline: none
@@ -271,7 +277,7 @@
   &__person
     margin-top: 70px
     display: flex
-    flex-wrap: wrap
+    flex-wrap: nowrap
     align-items: center
     gap: 104px
     &_img
@@ -410,6 +416,7 @@
           @include font-family(14px, 600, 171%, $colors-shuttle-gray, 0.07em)
           position: relative
           margin-left: 12px
+          text-transform: uppercase
           &::before
             content: ''
             width: 4px
@@ -508,6 +515,7 @@
       max-width: 1140px
       display: flex
       justify-content: space-between
+      flex-wrap: wrap
     &_pages
       display: flex
       flex-direction: column
