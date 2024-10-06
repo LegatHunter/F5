@@ -1,32 +1,39 @@
-const cards = [
-  {
-    company: "Dribble",
-    date: "October 25, 2022",
-    spec: "Front End Developer",
-    tag1: "Marketing",
-    tag2: "Part Time",
-    location: "San Antonio",
-    money: "$130k-160k",
-    url: "#",
+const swiper = new Swiper('.work__slider', {
+  slidesPerView: 3, // По умолчанию показывать 3 карточки
+  spaceBetween: 30, // Расстояние между карточками
+  loop: true,
+  autoplay: {
+    delay: 2500, // 2.5 секунды
+    disableOnInteraction: false,
   },
-  {
-    company: "Tokopedia",
-    date: "March 30, 2021",
-    spec: "Scrum Master",
-    tag1: "Marketing",
-    tag2: "Part Time",
-    location: "San Antonio",
-    money: "$130k-160k",
-    url: "#",
+  navigation: {
+    nextEl: '.work__btn_right',
+    prevEl: '.work__btn_left',
   },
-  {
-    company: "Facebook",
-    date: "March 30, 2021",
-    spec: "Lead Technical Architect",
-    tag1: "Technology",
-    tag2: "Full Time",
-    location: "Melbourne",
-    money: "$210k-240k",
-    url: "#",
-  },
-];
+  // Настройка для разных экранов
+  breakpoints: {
+    375: {
+      slidesPerView: 1, // Одна карточка на экранах от 375px до 500px
+      spaceBetween: 10, // Меньшее расстояние между карточками на мобильных
+    },
+    500: {
+      slidesPerView: 2, // 2 карточки для экранов шириной от 500px
+      spaceBetween: 20,
+    },
+    768: {
+      slidesPerView: 3, // Для больших экранов по умолчанию 3 карточки
+      spaceBetween: 30,
+    }
+  }
+});
+
+// Остановка автоплей на ховере
+const sliderElement = document.querySelector('.work__slider');
+
+sliderElement.addEventListener('mouseenter', () => {
+  swiper.autoplay.stop();
+});
+
+sliderElement.addEventListener('mouseleave', () => {
+  swiper.autoplay.start();
+});

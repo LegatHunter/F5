@@ -7,15 +7,17 @@ section.work.container
     .work__title_slide-btn
       button.work__btn_left
       button.work__btn_right
-  .work__slider
-    each card in companies
-      .work__slider_card
-        .work__slider_card-logo
-          .work__slider_img
-            img(src=card.logo)
-          h6= card.company
-        p.work__slider_card-info= card.info
-        p.work__slider_card-emp= card.epm
+  .work__slider.swiper-container
+    .swiper-wrapper
+      each card in companies
+        .swiper-slide
+          .work__slider_card
+            .work__slider_card-logo
+              .work__slider_img
+                img(src=card.logo)
+              h6= card.company
+            p.work__slider_card-info= card.info
+            p.work__slider_card-emp= card.epm
   .work__person
     .work__person_img
       img(src="img/man_its_ok.jpg")

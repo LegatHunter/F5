@@ -2,6 +2,7 @@
 @import reset
 @import variable
 @import mixin
+@import 'https://unpkg.com/swiper/swiper-bundle.min.css'
 
 *
   @include font-family (14px, 400, 180%, $colors-bright-gray, 0.02em)
@@ -244,7 +245,10 @@
     margin-top: 58px
     display: flex
     gap: 24px
-    flex-wrap: wrap
+    display: flex
+    overflow-x: scroll
+    scroll-behavior: smooth
+    scrollbar-width: none
     &_img
       border: 1px solid $colors-athens-gray
       padding: 12px
@@ -254,12 +258,14 @@
     &_card
       display: flex
       flex-direction: column
-      gap: 24px
       border: 1px solid $colors-athens-gray
       padding: 41px
-      max-width: 390px
+      // max-width: 390px
       width: 100%
       cursor: pointer
+      display: inline-block
+      width: 390px
+      margin-right: 24px
       &-logo
         display: flex
         gap: 14px
