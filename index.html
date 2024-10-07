@@ -4,10 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>F5 test task</title>
-    <link rel="stylesheet" href="style/style.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="script.js" defer></script>
+    <link rel="stylesheet" href="style/style.css">
   </head>
   <body class="body">
     <header class="header container"><a href="#"><img class="logo" src="../img/logo.png" alt="logo"></a>
@@ -195,7 +195,7 @@
       </div>
       <div class="work__slider swiper-container">
         <div class="swiper-wrapper">
-          <div class="swiper-slide work__slider_card">
+          <div class="work__slider_card swiper-slide">
             <div class="work__slider_card-logo">
               <div class="work__slider_img"><img src="img/dribble.svg"></div>
               <h6>Dribble</h6>
@@ -203,7 +203,7 @@
             <p class="work__slider_card-info">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus at dui mollis metus gravida tristique.</p>
             <p class="work__slider_card-emp">65 Employees</p>
           </div>
-          <div class="swiper-slide work__slider_card">
+          <div class="work__slider_card swiper-slide">
             <div class="work__slider_card-logo">
               <div class="work__slider_img"><img src="img/paypal.svg"></div>
               <h6>Paypal</h6>
@@ -211,7 +211,7 @@
             <p class="work__slider_card-info">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus at dui mollis metus gravida tristique.</p>
             <p class="work__slider_card-emp">6000 Employees</p>
           </div>
-          <div class="swiper-slide work__slider_card">
+          <div class="work__slider_card swiper-slide">
             <div class="work__slider_card-logo">
               <div class="work__slider_img"><img src="img/spotify.svg"></div>
               <h6>Spotify</h6>
@@ -219,7 +219,7 @@
             <p class="work__slider_card-info">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus at dui mollis metus gravida tristique.</p>
             <p class="work__slider_card-emp">2000 Employees</p>
           </div>
-          <div class="swiper-slide work__slider_card">
+          <div class="work__slider_card swiper-slide">
             <div class="work__slider_card-logo">
               <div class="work__slider_img"><img src="img/slack.svg"></div>
               <h6>Slack</h6>
@@ -321,45 +321,47 @@
             <button class="news__btn_right"></button>
           </div>
         </div>
-        <div class="news__slider">
-          <div class="news__slider_item">
-            <div class="news__slider_item-img"><img src="img/slider_1.jpg"></div>
-            <div class="news__slider_item-info"><small>Resources</small>
-              <h5>Finding employees in the gig economy</h5>
-              <p>October 24, 2022</p>
+        <div class="news__slider swiper-container">
+          <div class="swiper-wrapper">
+            <div class="news__slider_item swiper-slide">
+              <div class="news__slider_item-img"><img src="img/slider_1.jpg"></div>
+              <div class="news__slider_item-info"><small>Resources</small>
+                <h5>Finding employees in the gig economy</h5>
+                <p>October 24, 2022</p>
+              </div>
+              <div class="news__slider_item-btn">
+                <button>Read More <svg width="13" height="13" viewBox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M9.48668 5.75378L5.38918 1.65631L6.46928 0.576172L12.4108 6.51768L6.46928 12.4592L5.38918 11.3791L9.48668 7.28158H0.188599V5.75378H9.48668Z" fill="#24262D" /></svg></button>
+              </div>
             </div>
-            <div class="news__slider_item-btn">
-              <button>Read More <svg width="13" height="13" viewBox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M9.48668 5.75378L5.38918 1.65631L6.46928 0.576172L12.4108 6.51768L6.46928 12.4592L5.38918 11.3791L9.48668 7.28158H0.188599V5.75378H9.48668Z" fill="#24262D" /></svg></button>
+            <div class="news__slider_item swiper-slide">
+              <div class="news__slider_item-img"><img src="img/slider_2.jpg"></div>
+              <div class="news__slider_item-info"><small>Education</small>
+                <h5>How to make a great first impression everytime</h5>
+                <p>October 24, 2022</p>
+              </div>
+              <div class="news__slider_item-btn">
+                <button>Read More <svg width="13" height="13" viewBox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M9.48668 5.75378L5.38918 1.65631L6.46928 0.576172L12.4108 6.51768L6.46928 12.4592L5.38918 11.3791L9.48668 7.28158H0.188599V5.75378H9.48668Z" fill="#24262D" /></svg></button>
+              </div>
             </div>
-          </div>
-          <div class="news__slider_item">
-            <div class="news__slider_item-img"><img src="img/slider_2.jpg"></div>
-            <div class="news__slider_item-info"><small>Education</small>
-              <h5>How to make a great first impression everytime</h5>
-              <p>October 24, 2022</p>
+            <div class="news__slider_item swiper-slide">
+              <div class="news__slider_item-img"><img src="img/slider_3.jpg"></div>
+              <div class="news__slider_item-info"><small>Trends</small>
+                <h5>Find out the best paying careers in 2022</h5>
+                <p>October 24, 2022</p>
+              </div>
+              <div class="news__slider_item-btn">
+                <button>Read More <svg width="13" height="13" viewBox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M9.48668 5.75378L5.38918 1.65631L6.46928 0.576172L12.4108 6.51768L6.46928 12.4592L5.38918 11.3791L9.48668 7.28158H0.188599V5.75378H9.48668Z" fill="#24262D" /></svg></button>
+              </div>
             </div>
-            <div class="news__slider_item-btn">
-              <button>Read More <svg width="13" height="13" viewBox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M9.48668 5.75378L5.38918 1.65631L6.46928 0.576172L12.4108 6.51768L6.46928 12.4592L5.38918 11.3791L9.48668 7.28158H0.188599V5.75378H9.48668Z" fill="#24262D" /></svg></button>
-            </div>
-          </div>
-          <div class="news__slider_item">
-            <div class="news__slider_item-img"><img src="img/slider_3.jpg"></div>
-            <div class="news__slider_item-info"><small>Trends</small>
-              <h5>Find out the best paying careers in 2022</h5>
-              <p>October 24, 2022</p>
-            </div>
-            <div class="news__slider_item-btn">
-              <button>Read More <svg width="13" height="13" viewBox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M9.48668 5.75378L5.38918 1.65631L6.46928 0.576172L12.4108 6.51768L6.46928 12.4592L5.38918 11.3791L9.48668 7.28158H0.188599V5.75378H9.48668Z" fill="#24262D" /></svg></button>
-            </div>
-          </div>
-          <div class="news__slider_item">
-            <div class="news__slider_item-img"><img src="img/slider_4.jpg"></div>
-            <div class="news__slider_item-info"><small>Careers</small>
-              <h5>Ten things to nail your next job Interview</h5>
-              <p>March 24, 2021</p>
-            </div>
-            <div class="news__slider_item-btn">
-              <button>Read More <svg width="13" height="13" viewBox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M9.48668 5.75378L5.38918 1.65631L6.46928 0.576172L12.4108 6.51768L6.46928 12.4592L5.38918 11.3791L9.48668 7.28158H0.188599V5.75378H9.48668Z" fill="#24262D" /></svg></button>
+            <div class="news__slider_item swiper-slide">
+              <div class="news__slider_item-img"><img src="img/slider_4.jpg"></div>
+              <div class="news__slider_item-info"><small>Careers</small>
+                <h5>Ten things to nail your next job Interview</h5>
+                <p>March 24, 2021</p>
+              </div>
+              <div class="news__slider_item-btn">
+                <button>Read More <svg width="13" height="13" viewBox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M9.48668 5.75378L5.38918 1.65631L6.46928 0.576172L12.4108 6.51768L6.46928 12.4592L5.38918 11.3791L9.48668 7.28158H0.188599V5.75378H9.48668Z" fill="#24262D" /></svg></button>
+              </div>
             </div>
           </div>
         </div>

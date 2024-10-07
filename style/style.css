@@ -445,10 +445,6 @@ body, html {
   padding-left: 4px;
 }
 
-.swiper-slide {
-  display: flex !important;
-}
-
 .work {
   padding: 64px 0;
 }
@@ -562,7 +558,7 @@ body, html {
   width: fit-content;
 }
 .work__person {
-  margin-top: 70px;
+  margin-top: 127px;
   display: flex;
   flex-wrap: nowrap;
   align-items: center;
@@ -763,12 +759,13 @@ body, html {
   background-image: url("data:image/svg+xml,%3Csvg width='17' height='17' viewBox='0 0 17 17' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M12.9817 7.58858L7.61769 2.22455L9.03169 0.810547L16.8097 8.58858L9.03169 16.3666L7.769 14.9526L12.9817 9.58858H0.809692V7.58858H12.9817Z' fill='%23030407' /%3E%3C/svg%3E");
 }
 .news__slider {
-  display: flex;
-  gap: 24px;
-  justify-content: center;
-  flex-wrap: wrap;
+  position: relative;
+  width: 100%;
+  overflow-x: scroll;
+  scrollbar-width: none;
 }
 .news__slider_item {
+  flex-shrink: 0;
   border: 1px solid #ebebef;
   display: flex;
   flex-direction: column;
@@ -776,6 +773,7 @@ body, html {
   padding: 9px;
   align-items: center;
   max-width: 390px;
+  width: 100%;
 }
 .news__slider_item button {
   display: flex;
@@ -787,6 +785,7 @@ body, html {
   background-color: #f8f8fa;
   width: 324px;
   margin-bottom: 22px;
+  cursor: pointer;
 }
 .news__slider_item-img {
   max-width: 372px;

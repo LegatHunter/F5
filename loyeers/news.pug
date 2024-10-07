@@ -7,14 +7,15 @@ section.news
       .news__title_btn
         button.news__btn_left
         button.news__btn_right
-    .news__slider
-      for newsItem in news
-        .news__slider_item
-          .news__slider_item-img
-            img(src=newsItem.img)
-          .news__slider_item-info
-            small=newsItem.tag
-            h5= newsItem.title
-            p= newsItem.date
-          .news__slider_item-btn
-            button Read More <svg width="13" height="13" viewBox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M9.48668 5.75378L5.38918 1.65631L6.46928 0.576172L12.4108 6.51768L6.46928 12.4592L5.38918 11.3791L9.48668 7.28158H0.188599V5.75378H9.48668Z" fill="#24262D" /></svg>
+    .news__slider.swiper-container
+      .swiper-wrapper
+        for newsItem in news
+          .news__slider_item.swiper-slide
+            .news__slider_item-img
+              img(src=newsItem.img)
+            .news__slider_item-info
+              small=newsItem.tag
+              h5= newsItem.title
+              p= newsItem.date
+            .news__slider_item-btn
+              button Read More <svg width="13" height="13" viewBox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M9.48668 5.75378L5.38918 1.65631L6.46928 0.576172L12.4108 6.51768L6.46928 12.4592L5.38918 11.3791L9.48668 7.28158H0.188599V5.75378H9.48668Z" fill="#24262D" /></svg>

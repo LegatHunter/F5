@@ -216,9 +216,6 @@
     &_location img
       padding-left: 4px
 
-.swiper-slide
-  display: flex !important
-
 .work
   padding: 64px 0
   &__title
@@ -277,7 +274,7 @@
         display: inline-block
         width: fit-content
   &__person
-    margin-top: 70px
+    margin-top: 127px
     display: flex
     flex-wrap: nowrap
     align-items: center
@@ -380,11 +377,12 @@
       @include slider-btn
       background-image: $btn-right
   &__slider
-    display: flex
-    gap: 24px
-    justify-content: center
-    flex-wrap: wrap
+    position: relative
+    width: 100%
+    overflow-x: scroll
+    scrollbar-width: none
     &_item
+      flex-shrink: 0
       border: 1px solid $colors-athens-gray2
       display: flex
       flex-direction: column
@@ -392,6 +390,7 @@
       padding: 9px
       align-items: center
       max-width: 390px
+      width: 100%
       & button
         display: flex
         justify-content: center
@@ -402,6 +401,7 @@
         background-color: $colors-athens-gray
         width: 324px
         margin-bottom: 22px
+        cursor: pointer
       &-img
         max-width: 372px
       &-info
