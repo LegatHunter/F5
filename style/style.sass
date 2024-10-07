@@ -216,6 +216,8 @@
     &_location img
       padding-left: 4px
 
+.swiper-slide
+  display: flex !important
 
 .work
   padding: 64px 0
@@ -243,11 +245,7 @@
       @include slider-btn
   &__slider
     margin-top: 58px
-    display: flex
-    gap: 24px
-    display: flex
     overflow-x: scroll
-    scroll-behavior: smooth
     scrollbar-width: none
     &_img
       border: 1px solid $colors-athens-gray
@@ -260,12 +258,10 @@
       flex-direction: column
       border: 1px solid $colors-athens-gray
       padding: 41px
-      // max-width: 390px
+      max-width: 390px
       width: 100%
       cursor: pointer
-      display: inline-block
-      width: 390px
-      margin-right: 24px
+      gap: 24px
       &-logo
         display: flex
         gap: 14px
@@ -331,6 +327,8 @@
 .users
   background-color: $colors-athens-gray
   padding-bottom: 64px
+  &__container
+    overflow: hidden
   & h3
     @include second-family(40px, 700, 120%, $colors-ebony, 0em)
     text-align: center

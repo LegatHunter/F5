@@ -445,6 +445,10 @@ body, html {
   padding-left: 4px;
 }
 
+.swiper-slide {
+  display: flex !important;
+}
+
 .work {
   padding: 64px 0;
 }
@@ -502,11 +506,7 @@ body, html {
 }
 .work__slider {
   margin-top: 58px;
-  display: flex;
-  gap: 24px;
-  display: flex;
   overflow-x: scroll;
-  scroll-behavior: smooth;
   scrollbar-width: none;
 }
 .work__slider_img {
@@ -522,11 +522,10 @@ body, html {
   flex-direction: column;
   border: 1px solid #f8f8fa;
   padding: 41px;
+  max-width: 390px;
   width: 100%;
   cursor: pointer;
-  display: inline-block;
-  width: 390px;
-  margin-right: 24px;
+  gap: 24px;
 }
 .work__slider_card-logo {
   display: flex;
@@ -648,6 +647,9 @@ body, html {
 .users {
   background-color: #f8f8fa;
   padding-bottom: 64px;
+}
+.users__container {
+  overflow: hidden;
 }
 .users h3 {
   font-family: "Archivo", sans-serif;
