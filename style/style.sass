@@ -552,6 +552,9 @@
         width: 319px
         border: 1px solid $colors-athens-gray2
         @include font-family(15px, 400, 180%, $colors-dusty-gray, 0em)
+        &:hover, &:focus-within
+          outline: 1px solid $colors-royal-blue
+          fill: $colors-royal-blue
       & input::placeholder
         padding-left: 19px
         @include font-family(15px, 400, 180%, $colors-dusty-gray, 0em)

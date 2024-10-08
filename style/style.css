@@ -1041,6 +1041,10 @@ body, html {
   color: #999;
   letter-spacing: 0em;
 }
+.footer__cont_form input:hover, .footer__cont_form input:focus-within {
+  outline: 1px solid rgb(68, 63, 222);
+  fill: rgb(68, 63, 222);
+}
 .footer__cont_form input::-moz-placeholder {
   padding-left: 19px;
   font-family: "Inter", sans-serif;
